@@ -1,17 +1,14 @@
-// Last updated: 6/17/2025, 12:47:38 PM
+// Last updated: 6/17/2025, 1:05:40 PM
 class Solution {
 public:
-    bool isSubsequence(string s, string t) {
-        int i = 0;
-        for(char C: t){
-            if(s[i] == C){
-                i++;
-            }
-        }
-        if(i==s.length()){
+    bool isAnagram(string s, string t) {
+        sort(s.begin(),s.end());
+        sort(t.begin(),t.end());
+
+        if(s.compare(t)==0){
             return true;
         }
-        
+
         return false;
 
     }
